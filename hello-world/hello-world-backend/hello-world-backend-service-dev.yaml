@@ -1,0 +1,16 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: hello-world-backend
+  namespace: dev
+  labels:
+    app: hello-world-backend
+spec:
+  ports:
+    - protocol: TCP
+      port: 3040
+      targetPort: 3040
+      name http
+  selector:
+    app: hello-world-backend
+  type: NodePort

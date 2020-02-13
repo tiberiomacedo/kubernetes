@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-world-backend
+  namespace: dev
+spec:
+  selector:
+    matchLabels:
+      app: hello-world-backend
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: hello-world-backend
+    spec:
+      containers:
+      - name: hello-world-backend
+        image: tiberiomacedo/hello-world-backend:v1.0.0
+        ports:
+        - containerPort: 3040

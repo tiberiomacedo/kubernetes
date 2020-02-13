@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: hello-world-backend
+  namespace: prod
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: web-app.info
+    http:
+      paths:
+      - path: /hwbff
+        backend:
+          serviceName: hello-world-backend
+          servicePort: 3040
