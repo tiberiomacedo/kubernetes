@@ -3,7 +3,7 @@ const router = express.Router();
 const app = express();
 
 router.get('/hwbff', (req, res) => {
-    console.log(req.headers);
+    console.log('timestamp: ' + new Date().getTime());
     res.json({ message: 'Hello World' });
 });
 

@@ -2,12 +2,11 @@ apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: hello-world-backend
-  namespace: dev
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
 spec:
   rules:
-  - host: web-app.info
+  - host: dev-hello-world-backend.com.br
     http:
       paths:
       - path: /hwbff
