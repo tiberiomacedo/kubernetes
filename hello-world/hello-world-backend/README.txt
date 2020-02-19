@@ -19,8 +19,3 @@ $ kubectl apply -f hello-world-backend-service-dev.yaml
 $ kubectl apply -f hello-world-backend-ingress-dev.yaml
 $ curl prod-hello-world-backend.com.br/hwbff
 ```
-
-## 
-```bash
-$ kubectl apply -f mandatory.yaml
-```
