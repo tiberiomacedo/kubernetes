@@ -17,7 +17,7 @@ spec:
       serviceAccount: dev-nginx
       containers:
         - name: nginx-ingress-controller
-          image: quay.io/kubernetes-ingress-controller/nginx-ingress-controller:0.29.0
+          image: 10.129.178.173:5006/infra/nginx-ingress-controller:0.9.0
           imagePullPolicy: Always
           readinessProbe:
             httpGet:
