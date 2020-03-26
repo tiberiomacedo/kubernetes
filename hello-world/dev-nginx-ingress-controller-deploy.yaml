@@ -17,7 +17,7 @@ spec:
       serviceAccount: dev-nginx
       containers:
         - name: nginx-ingress-controller
-          image: 10.129.178.173:5006/infra/nginx-ingress-controller:0.9.0
+          image: quay.io/kubernetes-ingress-controller/nginx-ingress-controller:0.29.0
           imagePullPolicy: Always
           readinessProbe:
             httpGet:
@@ -33,7 +33,6 @@ spec:
             timeoutSeconds: 5
           args:
             - /nginx-ingress-controller
-            - --default-backend-service=$(POD_NAMESPACE)/dev-backend
             - --configmap=$(POD_NAMESPACE)/nginx-ingress-controller-conf
             - --v=2
           env:

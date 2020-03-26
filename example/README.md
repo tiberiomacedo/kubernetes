@@ -22,3 +22,5 @@ $ curl -kL http://localhost/apple
 $ curl -kL http://localhost/banana
 $ curl -kL http://localhost/notfound
 ```
+
+https://matthewpalmer.net/kubernetes-app-developer/articles/kubernetes-ingress-guide-nginx-example.html
