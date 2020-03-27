@@ -2,10 +2,9 @@ const express = require('express');
 const router = express.Router();
 const app = express();
 
-const contextPath = '/mvbff/greetings';
 const { version } = require('./package.json');
 
-router.get(contextPath + '/v1/hello', (req, res) => {
+router.get('/v1/hello', (req, res) => {
     console.log('timestamp: ' + new Date().getTime());
     res.json({ message: 'Hello World!' });
 });
